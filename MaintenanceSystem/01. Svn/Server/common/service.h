@@ -1,1 +1,0 @@
-#define ENABLE_MAINTENANCE_SYSTEM			//Bakým sistemi. //Coding Kio
