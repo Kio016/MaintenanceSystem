@@ -1,1 +1,1 @@
-#define ENABLE_MAINTENANCE_SYSTEM			//Bakým sistemi. //Coding Kio
+#define ENABLE_MAINTENANCE_SYSTEM			//BakÃ½m sistemi. //Author Kio
