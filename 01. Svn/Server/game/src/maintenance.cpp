@@ -38,7 +38,7 @@ EVENTFUNC(maintenance_start_event)
 	if (get_global_time() > info->dwRemainingTime)
 	{
 		char szNotice[128];
-		snprintf(szNotice, sizeof(szNotice), "<Bakým Sistemi> Bakým baþlýyor... %s sürecektir.", CMaintenance::Instance().SecondToHM(info->dwMaintenanceTime));
+		snprintf(szNotice, sizeof(szNotice), "<BakÃ½m Sistemi> BakÃ½m baÃ¾lÃ½yor... %s sÃ¼recektir.", CMaintenance::Instance().SecondToHM(info->dwMaintenanceTime));
 		BroadcastNotice(szNotice, true);
 
 		TPacketGGShutdown p;
@@ -48,8 +48,8 @@ EVENTFUNC(maintenance_start_event)
 		Shutdown(10);
 		return 0;
 	}
-	else
-		return PASSES_PER_SEC(1);
+
+	return PASSES_PER_SEC(1);
 }
 
 void CMaintenance::StartMaintenance(DWORD dwTime, DWORD dwTime2)
