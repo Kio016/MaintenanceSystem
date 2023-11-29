@@ -2,6 +2,25 @@
 
 import uimaintenance
 
+# Search:
+
+        self.__ProcessPreservedServerCommand()
+
+# Add below:
+
+        self.maintenance = uimaintenance.MaintenanceWindow()
+        self.maintenance.Hide()
+
+# Search:
+
+        player.ClearSkillDict()
+
+# Add above:
+
+        if self.maintenance:
+            self.maintenance.Hide()
+            self.maintenance = None
+
 #Search:
 
 		onPressKeyDict[app.DIK_F4]	= lambda : self.__PressQuickSlot(7)
@@ -23,7 +42,6 @@ import uimaintenance
 #Add to bottom:
 
 	def Maintenancegui(self,time,duration):
-		self.maintenance = uimaintenance.MaintenanceWindow()
 		self.maintenance.Open(time,duration)
 
 	def maintenanceadminopen(self):
